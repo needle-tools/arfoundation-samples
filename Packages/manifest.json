@@ -1,5 +1,4 @@
 {
-  "registry": "https://artifactory.prd.cds.internal.unity3d.com/artifactory/api/npm/upm-candidates",
   "dependencies": {
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.2d.tilemap": "1.0.0",
@@ -20,7 +19,6 @@
     "com.unity.xr.arkit-face-tracking": "3.0.0",
     "com.unity.xr.arsubsystems": "3.0.0",
     "com.unity.xr.legacyinputhelpers": "2.0.6",
-    "com.unity.xr.magicleap": "file:/Users/mdurand/dev/xr.sdk.magicleap/Packages/com.unity.xr.magicleap",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
