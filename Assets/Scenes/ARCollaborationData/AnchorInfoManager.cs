@@ -5,14 +5,14 @@ using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 
 /// <summary>
-/// Displays information about each reference point including
-/// whether or not the reference point is local or remote.
-/// The reference point prefab is assumed to include a GameObject
+/// Displays information about each anchor including
+/// whether or not the anchor is local or remote.
+/// The anchor prefab is assumed to include a GameObject
 /// which can be colored to indicate which session created it.
 /// </summary>
 [RequireComponent(typeof(ARSessionOrigin))]
-[RequireComponent(typeof(ARReferencePointManager))]
-public class ReferencePointInfoManager : MonoBehaviour
+[RequireComponent(typeof(ARAnchorManager))]
+public class AnchorInfoManager : MonoBehaviour
 {
     [SerializeField]
     ARSession m_Session;
@@ -25,24 +25,24 @@ public class ReferencePointInfoManager : MonoBehaviour
 
     void OnEnable()
     {
-        GetComponent<ARReferencePointManager>().referencePointsChanged += OnReferencePointsChanged;
+        GetComponent<ARAnchorManager>().anchorsChanged += OnAnchorsChanged;
     }
 
     void OnDisable()
     {
-        GetComponent<ARReferencePointManager>().referencePointsChanged -= OnReferencePointsChanged;
+        GetComponent<ARAnchorManager>().anchorsChanged -= OnAnchorsChanged;
     }
 
-    void OnReferencePointsChanged(ARReferencePointsChangedEventArgs eventArgs)
+    void OnAnchorsChanged(ARAnchorsChangedEventArgs eventArgs)
     {
-        foreach (var referencePoint in eventArgs.added)
+        foreach (var anchor in eventArgs.added)
         {
-            UpdateReferencePoint(referencePoint);
+            UpdateAnchor(anchor);
         }
 
-        foreach (var referencePoint in eventArgs.updated)
+        foreach (var anchor in eventArgs.updated)
         {
-            UpdateReferencePoint(referencePoint);
+            UpdateAnchor(anchor);
         }
     }
 
@@ -51,9 +51,9 @@ public class ReferencePointInfoManager : MonoBehaviour
         public fixed byte data[16];
     }
 
-    void UpdateReferencePoint(ARReferencePoint referencePoint)
+    void UpdateAnchor(ARAnchor anchor)
     {
-        var canvas = referencePoint.GetComponentInChildren<Canvas>();
+        var canvas = anchor.GetComponentInChildren<Canvas>();
         if (canvas == null)
             return;
 
@@ -63,7 +63,7 @@ public class ReferencePointInfoManager : MonoBehaviour
         if (text == null)
             return;
 
-        var sessionId = referencePoint.sessionId;
+        var sessionId = anchor.sessionId;
         if (sessionId.Equals(session.subsystem.sessionId))
         {
             text.text = $"Local";
@@ -73,7 +73,7 @@ public class ReferencePointInfoManager : MonoBehaviour
             text.text = $"Remote";
         }
 
-        var cube = referencePoint.transform.Find("Scale/SessionId Indicator");
+        var cube = anchor.transform.Find("Scale/SessionId Indicator");
         if (cube != null)
         {
             var renderer = cube.GetComponent<Renderer>();
