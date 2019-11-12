@@ -36,14 +36,14 @@ EditorBuildSettings:
     path: Assets/Scenes/FaceTracking/RearCameraWithFrontCameraFaceMesh.unity
     guid: ecea31d2ea5464e52bedb91fa1fcb6bb
   - enabled: 0
-    path: Assets/Scenes/HumanSegmentation/HumanBodyTracking2D.unity
-    guid: b2551dd1f69e7446e9093f0f38e03160
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/HumanSegmentation/HumanBodyTracking3D.unity
-    guid: 9fc1f5ed98d414310a8b9e659c295d7c
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/HumanSegmentation/HumanSegmentationImages.unity
-    guid: ed5207d50697d40d688249cd6c59608b
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Scenes/ImageTracking/ImageTracking.unity
     guid: e0b018a3c3b5cfd4c8e316706ec0a18c
@@ -51,8 +51,8 @@ EditorBuildSettings:
     path: Assets/Scenes/LightEstimation.unity
     guid: 2f0cbc82480584c258f99f0d9e4ba302
   - enabled: 0
-    path: Assets/Scenes/Object Tracking/ObjectTracking.unity
-    guid: 8f797cefb98fe43109524cbbcc8faafc
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Scenes/Plane Detection/FeatheredPlanes.unity
     guid: 8252358a1e2ba7549a94df43aacec984
@@ -69,7 +69,7 @@ EditorBuildSettings:
     path: Assets/Scenes/UX/SampleUXScene.unity
     guid: 3b42d67a72bbc4004bf713db0e312326
   - enabled: 0
-    path: Assets/Scenes/ReferencePoints.unity
+    path: Assets/Scenes/AnchorPoints.unity
     guid: 5cba9114a192a46a7aef31da62316e39
   - enabled: 0
     path: Assets/Scenes/Plane Detection/PlaneClassification.unity
