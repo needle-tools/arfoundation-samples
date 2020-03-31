@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.49641287, b: 0.5748173, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1203,7 +1203,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1323826960
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1283,7 +1282,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1404417666
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1392,7 +1390,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1483313500
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1487,7 +1484,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1716705115
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1655,7 +1651,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1800616538
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1900,8 +1895,8 @@ GameObject:
   - component: {fileID: 1922738389}
   - component: {fileID: 1922738385}
   - component: {fileID: 1922738388}
-  - component: {fileID: 1922738387}
   - component: {fileID: 1922738386}
+  - component: {fileID: 1922738387}
   m_Layer: 0
   m_Name: AR Camera
   m_TagString: Untagged
